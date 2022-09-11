@@ -11,4 +11,7 @@
 <h1>Main Structure</h1>
 <ol>
 <li>U1 Programming introduction
+<li>U2 Control structures and cycles
+<li>U3 Functions
+<li>U4 Files and arrays
 </OL>

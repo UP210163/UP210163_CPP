@@ -3,7 +3,7 @@
 ### _Jeannleyn Avila Jimenez_
 
 
-![Bombon pelona jsjsjs](/imagenes/descarga.jpeg "Bombon Pelona jsjsjs")
+![Jeannelyn Avila LG](/imagenes/Jeannelyn.png "Jeannelyn Avila")
 
 
 

@@ -1,2 +1,4 @@
 
-<center><img src="/imagenes/Jeannelyn.png" width="50%" alt="Jeannelyn LG"><center/>
+<p align="center">
+<img src="/imagenes/Jeannelyn.png" width="490" alt="Jeannelyn LG"/>
+<p/>

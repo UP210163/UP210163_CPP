@@ -15,6 +15,7 @@
 <li>U3 Functions
 <li>U4 Files and arrays
 </OL>
+<p>
 <h2>Unit weight</h2>
 <table border="5">
 <tr>
@@ -29,3 +30,10 @@
 <th>25%</th>
 <th>15%</th>
 </tr>
+</table>
+</p>
+<br>
+<h4>Contacts</h4>
+<p align="left">
+<a href="https://www.facebook.com/UniversidadPolitecnicaAguascalientes/"><img src="/imagenes/fc.png" width="85" title="UPA"><a/>
+<a href="https://instagram.com/upolitecnicaags?igshid=YmMyMTA2M2Y="><img src="/imagenes/in.jpeg" width="85" title="UPA"><a/>

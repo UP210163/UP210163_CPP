@@ -13,22 +13,48 @@ int main(){
   int renta;
   int descuento=0;
   int pago=0;
+  char texto1[40]="Impositivo correspondiente: ";
+  char texto2[40]="Correspondiente a: ";
+
+
 
   cout<<"Ingresa el monto de tu renta mensualmente:";
   cin>>renta;
+ 
 
   if(renta<10000){
-    cout<<"Impositivo correspondiente: "<<"5%"<<endl;
+    cout<<texto1<<"5%"<<endl;
     descuento= (renta/100)*5;
     pago=descuento;
-    cout<<"correspondiente a: "<<pago<<endl;
+    cout<<texto2<<pago<<endl;
     
   }
-  if(renta<10000){
-    cout<<"Impositivo correspondiente: "<<"5%"<<endl;
+  if(renta>=10000 && renta<20000){
+    cout<<texto1<<"15%"<<endl;
     descuento= (renta/100)*15;
     pago=descuento;
-    cout<<"correspondiente a: "<<pago<<endl;
+    cout<<texto2<<pago<<endl;
+    
+  }
+   if(renta>=20000 && renta<35000){
+    cout<<texto1<<"20%"<<endl;
+    descuento= (renta/100)*20;
+    pago=descuento;
+    cout<<texto2<<pago<<endl;
+    
+  }
+   if(renta>=35000 && renta<60000){
+    cout<<texto1<<"30%"<<endl;
+    descuento= (renta/100)*30;
+    pago=descuento;
+    cout<<texto2<<pago<<endl;
+    
+  }
+   if(renta>=60000){
+    cout<<texto1<<"45%"<<endl;
+    descuento= (renta/100)*45;
+    pago=descuento;
+    cout<<texto2<<pago<<endl;
     
   }
     return 0;

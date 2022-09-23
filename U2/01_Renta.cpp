@@ -20,11 +20,16 @@ int main(){
   if(renta<10000){
     cout<<"Impositivo correspondiente: "<<"5%"<<endl;
     descuento= (renta/100)*5;
+    pago=descuento;
+    cout<<"correspondiente a: "<<pago<<endl;
     
   }
-
-if(renta >=10000 && <= 20000){
-    cout<<"Impositivo correspondiente: "<<"15%"<<endl;
+  if(renta<10000){
+    cout<<"Impositivo correspondiente: "<<"5%"<<endl;
+    descuento= (renta/100)*15;
+    pago=descuento;
+    cout<<"correspondiente a: "<<pago<<endl;
+    
   }
     return 0;
 }

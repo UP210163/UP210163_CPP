@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(){
-  
+  //----Declaración de variables----
   int renta;
   int descuento=0;
   int pago=0;
@@ -21,7 +21,7 @@ int main(){
   cout<<"Ingresa el monto de tu renta mensualmente:";
   cin>>renta;
  
-
+//----Calculo e impresión  de los impositivos----
   if(renta<10000){
     cout<<texto1<<"5%"<<endl;
     descuento= (renta/100)*5;

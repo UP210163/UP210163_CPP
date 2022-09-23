@@ -17,7 +17,7 @@ int main(){
   char texto2[40]="Correspondiente a: ";
 
 
-
+//----Solicitar monto de renta a el usuario----
   cout<<"Ingresa el monto de tu renta mensualmente:";
   cin>>renta;
  

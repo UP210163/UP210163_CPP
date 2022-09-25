@@ -76,4 +76,12 @@
 <h3> Resultados Finales</h3>
 <ol>
 <li>Para Monto menor a $10,000
-<img src= "imagenes/menor10.png">
+    <img src="UP210163_CPP/../../imagenes/menor10.png">
+<li>Para monto mayor o igual a $10,000 o menor a $20,000
+    <img src="UP210163_CPP/../../imagenes/menor20.png">
+ <li>Para monto mayor o igual a $20,000 o menor a $35,000
+    <img src="UP210163_CPP/../../imagenes/menor35.png">
+ <li>Para monto mayor o igual a $35,000 o menor a $60,000
+    <img src="UP210163_CPP/../../imagenes/menor60.png">
+ <li>Para monto mayor o igual a $60,000
+    <img src="UP210163_CPP/../../imagenes/mayor60.png">

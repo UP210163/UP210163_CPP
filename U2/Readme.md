@@ -1,4 +1,4 @@
-<h1> EJERCICIO 1: Impositivo correspondiente según el monto de renta del cliente</h1>
+<h1> EJERCICIO 1: Impositivo correspondiente según el monto de renta del cliente <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
 <h2> Estructura del código (C++)</h2>
 
     /----Librerías instanciadas----

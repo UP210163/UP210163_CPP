@@ -1,10 +1,11 @@
 <h1> EJERCICIO 1: Impositivo correspondiente según el monto de renta del cliente <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
 <h2> Estructura del código (C++)</h2>
 
+```c++
     /----Librerías instanciadas----
     #include <iostream>
     #include <stdio.h>
-
+    
     using namespace std;
 
     int main()
@@ -58,6 +59,7 @@
       }
         return 0;
     }    
+```
 
 <h3> Función principal </h3>
 <p> Mostral al usuario el impositivo correspondiente a pagar según el monto total de renta </p>

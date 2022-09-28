@@ -1,7 +1,7 @@
-/* Unidad 2. Uso del if else
-   Autor: Jeannelyn Avila Jimenez
-   Fecha: 22/09/2022
-   Descripción: Problema número uno "Renta"
+/* Unit 2. Use of if else
+   Author: Jeannelyn Avila Jimenez
+   Date: 09/22/2022
+   Description: Problem number one "Rent"
 */
 #include <iostream>
 #include <stdio.h>
@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(){
-  //----Declaración de variables----
+//----Declaration of variables----
   int renta;
   int descuento=0;
   int pago=0;
@@ -17,11 +17,11 @@ int main(){
   char texto2[40]="Correspondiente a: ";
 
 
-//----Solicitar monto de renta a el usuario----
+//----Request rental amount from the user----
   cout<<"Ingresa el monto de tu renta mensualmente:";
   cin>>renta;
  
-//----Calculo e impresión  de los impositivos----
+//----Calculation and printing of taxes----
   if(renta<10000){
     cout<<texto1<<"5%"<<endl;
     descuento= (renta/100)*5;

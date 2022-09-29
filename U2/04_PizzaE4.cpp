@@ -10,14 +10,14 @@ using namespace std;
 
 int main()
 {
-
+//----Declaration of variables----
     int pizza;
     int ingredientes;
     string ingred;
-
+//----Request rental amount from the user----
     cout << "¿Desea una pizza Vegetariana (Digita 1) o No Vegetariana (Digita 2)?" << endl;
     cin >> pizza;
-
+//-----Printing of the selected menu----
     if (pizza == 1)
     {
         cout << "Ingredientes Vegetarianos: " << endl;

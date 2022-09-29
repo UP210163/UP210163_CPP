@@ -1,15 +1,15 @@
-<h1> EJERCICIO 1: Impositivo correspondiente según el monto de renta del cliente <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
-<h2> Estructura del código (C++)</h2>
+<h1> EXERCISE 1: Corresponding tax according to the amount of rent of the client<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
+<h2> Code structure (C++)</h2>
 
 ```c++
-    /----Librerías instanciadas----
+    /----Instanced Libraries----
     #include <iostream>
     #include <stdio.h>
     
     using namespace std;
 
     int main()
-    //----Declaración de variables----
+    //----Declaration of variables----
       int renta;
       int descuento=0;
       int pago=0;
@@ -17,11 +17,11 @@
       char texto2[40]="Correspondiente a: $";
 
 
-    //----Solicitar monto de renta a el usuario----
+    //----Request rent amount to the user----
       cout<<"Ingresa el monto de tu renta mensualmente:";
       cin>>renta;
  
-    //----Calculo e impresión  de los impositivos----
+    //----Calculation and printing of taxes----
       if(renta<10000){
         cout<<texto1<<"5%"<<endl;
         descuento= (renta/100)*5;
@@ -61,30 +61,30 @@
     }    
 ```
 
-<h3> Función principal </h3>
-<p> Mostral al usuario el impositivo correspondiente a pagar según el monto total de renta </p>
+<h3>Principal function</h3>
+<p> Show the user the corresponding tax to pay according to the total amount of rent </p>
 <ol>
-<li>El usuario ingresa el monto personal de renta
-<li>Se realizan los cálculos correspondientes a la cantidad ingresada de la siguiente manera:
+<li>The user enters the personal amount of rent
+<li>The calculations corresponding to the amount entered are performed as follows:
 <ol>
 <ol type="a">
-<li>Si el monto es menor a $10,000 el impositivo será igual a: 5%
-<li>Si el monto es menor o igual a $10,000 o menor que $20,000 el impositivo será igual a: 15%
-<li>Si el monto es menor o igual a $20,000 o menor que $35,000 el impositivo será igual a: 20%
-<li>Si el monto es menor o igual a $35,000 o menor que $60,000 el impositivo será igual a: 30%
-<li>Si el monto es mayor o igual a $60,000 el impositivo será igual a: 45%
+<li>If the amount is less than $10,000, the tax will be equal to: 5%
+<li>If the amount is less than or equal to $10,000 or less than $20,000, the tax will be equal to: 15%
+<li>If the amount is less than or equal to $20,000 or less than $35,000, the tax will be equal to: 20%
+<li>If the amount is less than or equal to $35,000 or less than $60,000, the tax will be equal to: 30%
+<li>If the amount is greater than or equal to $60,000, the tax will be equal to: 45%
 </ol>
 
-<h3> Resultados Finales</h3>
-<ol>
-<li>Para Monto menor a $10,000
+<h3> Final results</h3>
+<ol type="A>
+<li>For amount less than $10,000
     <img src="UP210163_CPP/../../imagenes/menor10.png">
-<li>Para monto mayor o igual a $10,000 o menor a $20,000
+<li>For an amount greater than or equal to $10,000 or less than $20,000
     <img src="UP210163_CPP/../../imagenes/menor20.png">
- <li>Para monto mayor o igual a $20,000 o menor a $35,000
+ <li>For an amount greater than or equal to $20,000 or less than $35,000
     <img src="UP210163_CPP/../../imagenes/menor35.png">
- <li>Para monto mayor o igual a $35,000 o menor a $60,000
+ <li>For an amount greater than or equal to $35,000 or less than $60,000
     <img src="UP210163_CPP/../../imagenes/menor60.png">
- <li>Para monto mayor o igual a $60,000
+ <li>For amounts greater than or equal to $60,000
     <img src="UP210163_CPP/../../imagenes/mayor60.png">
  

@@ -1,7 +1,7 @@
 
 <h1 align="left"> 
 EXERCISE 1: Corresponding tax according to the amount of rent of the client<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40>
-<h4/>
+</h1>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -90,11 +90,12 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
     <img src="UP210163_CPP/../../imagenes/menor60.png">
  <li>For amounts greater than or equal to $60,000
     <img src="UP210163_CPP/../../imagenes/mayor60.png">
+</ol>
  
  <br><br><br>
 
 <h1 align="left"> 
-EXERCISE 2: Benefits (Bonus assigned according to scores) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h4/>
+EXERCISE 2: Benefits (Bonus assigned according to scores) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -151,7 +152,7 @@ int main (){
 <li>User enters their score
 <li>If the user enters a value other than 0, 0.4 or a number greater than 0.6, the program will not advance and will throw a warning message
 <li>If the user enters a valid value, it prints the corresponding bond along with the amount to which it is creditor
-<ol>
+</ol>
 <br><br>
 
 <h3> Final results</h3>
@@ -166,12 +167,13 @@ int main (){
     <img src="UP210163_CPP/../../imagenes/menor60.png">
  <li>For amounts greater than or equal to $60,000
     <img src="UP210163_CPP/../../imagenes/mayor60.png">
+  </ol>
  
  <br><br><br>
  
  
 <h1 align="left"> 
- EXERCISE 3: Tickets (Price corresponding to pay according to your age) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h4/>
+ EXERCISE 3: Tickets (Price corresponding to pay according to your age) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -213,7 +215,7 @@ return 0;
 <li>The user enters his age
 <li>The program begins to assign the price that corresponds to it
 <li>The price to pay is printed on the screen
-<ol>
+</ol>
 <br><br>
 
 <h3> Final results</h3>
@@ -228,12 +230,13 @@ return 0;
     <img src="UP210163_CPP/../../imagenes/menor60.png">
  <li>For amounts greater than or equal to $60,000
     <img src="UP210163_CPP/../../imagenes/mayor60.png">
+ </ol>
  
  <br><br><br>
  
  
 <h1 align="left"> 
- EXERCISE 4: Pizza (Sample of the menu according to the client's selection) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h4/>
+ EXERCISE 4: Pizza (Sample of the menu according to the client's selection) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h1/>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -320,7 +323,7 @@ int main()
 <li>The program asks the user what type of pizza he wants
 <li>With the previous information, the menu corresponding to this selection is displayed.
 <li>At the end, the user can view their complete order to check that it is correct.
-<ol>
+</ol>
 <br><br>
 
 <h3> Final results</h3>
@@ -335,11 +338,73 @@ int main()
     <img src="UP210163_CPP/../../imagenes/menor60.png">
  <li>For amounts greater than or equal to $60,000
     <img src="UP210163_CPP/../../imagenes/mayor60.png">
+ </ol>
  
  <br><br><br>
  
  
 <h1 align="left"> 
- Temperatures (calculation of the average, minimum and maximum amount according to the temperature given by the user)<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h4/>
+  EXERCISE 5: Temperatures (calculation of the average, minimum and maximum amount according to the temperature given by the user)<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h1/>
 <h2> Code structure (C++)</h2>
 
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+//----Declaration of variables----
+    float temperatura;
+    float sumAcum = 0;
+    int min = 9999, max = -9999;
+    int cont = 1;
+
+//-----Data collection-----
+    do
+    {
+        cout << "Give me the temperature: " << endl;
+        cin >> temperatura;
+        sumAcum +=temperatura;
+
+        cont ++;
+        if (temperatura <= min)
+        {
+            min=temperatura;
+        }
+        if (temperatura >= max)
+        {
+            max=temperatura;
+        }
+    } while (cont <=6);
+//-----Printing of the results----- 
+    cout << "The average of temperature today is : " << sumAcum/6 <<endl;
+    cout << "The minimum temperature :" << min<< endl;
+    cout << "The maximum temperature :" << max << endl;
+
+return 0;
+}
+```
+<h3>Principal function</h3>
+<p> This program is based on taking the client's order with the established options and at the end its complete order is printed to be seen by the user.</p>
+<ol>
+<li>The program asks the user what type of pizza he wants
+<li>With the previous information, the menu corresponding to this selection is displayed.
+<li>At the end, the user can view their complete order to check that it is correct.
+</ol>
+<br><br>
+
+<h3> Final results</h3>
+<ol type="A>
+<li>For amount less than $10,000
+    <img src="UP210163_CPP/../../imagenes/menor10.png">
+<li>For an amount greater than or equal to $10,000 or less than $20,000
+    <img src="UP210163_CPP/../../imagenes/menor20.png">
+ <li>For an amount greater than or equal to $20,000 or less than $35,000
+    <img src="UP210163_CPP/../../imagenes/menor35.png">
+ <li>For an amount greater than or equal to $35,000 or less than $60,000
+    <img src="UP210163_CPP/../../imagenes/menor60.png">
+ <li>For amounts greater than or equal to $60,000
+    <img src="UP210163_CPP/../../imagenes/mayor60.png">
+ </ol>
+ 
+ <br><br><br>

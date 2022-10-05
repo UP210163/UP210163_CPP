@@ -17,13 +17,13 @@ using namespace std;
         do{
             cout<<"Enter the number of products: ";
             cin>>cant;
-            cout<<"Enter the price of the product: $";
-            cin>>precio;
-           
             if(cant==0){
                 cout<<"Finalizing invoice..."<<endl;
                 break;
             }
+            cout<<"Enter the price of the product: $";
+            cin>>precio;
+           
             total=cant*precio;
             fac=total+fac;
         }while (cant!=0); 

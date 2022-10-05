@@ -95,7 +95,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
  <br><br><br>
 
 <h1 align="left"> 
-EXERCISE 2: Benefits (Bonus assigned according to scores) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
+EXERCISE 2: Benefits (Bonus assigned according to scores)<img src="UP210163_CPP/../../imagenes/beneficios.png" width=55></h1>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -173,7 +173,7 @@ int main (){
  
  
 <h1 align="left"> 
- EXERCISE 3: Tickets (Price corresponding to pay according to your age) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40></h1>
+ EXERCISE 3: Tickets (Price corresponding to pay according to your age) <img src="UP210163_CPP/../../imagenes/boleto.png" width=55></h1>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -236,7 +236,7 @@ return 0;
  
  
 <h1 align="left"> 
- EXERCISE 4: Pizza (Sample of the menu according to the client's selection) <img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h1/>
+ EXERCISE 4: Pizza (Sample of the menu according to the client's selection) <img src="UP210163_CPP/../../imagenes/pizza.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -344,7 +344,7 @@ int main()
  
  
 <h1 align="left"> 
-  EXERCISE 5: Temperatures (calculation of the average, minimum and maximum amount according to the temperature given by the user)<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40><h1/>
+  EXERCISE 5: Temperatures (calculation of the average, minimum and maximum amount according to the temperature given by the user)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
 
 ```c++
@@ -385,11 +385,12 @@ return 0;
 }
 ```
 <h3>Principal function</h3>
-<p> This program is based on taking the client's order with the established options and at the end its complete order is printed to be seen by the user.</p>
+<p> This program collects temperatures given by the user to carry out the following procedure</p>
 <ol>
-<li>The program asks the user what type of pizza he wants
-<li>With the previous information, the menu corresponding to this selection is displayed.
-<li>At the end, the user can view their complete order to check that it is correct.
+<li>User enters 6 temperatures.
+<li>The program adds these temperatures to calculate the average between them.
+<li>The program does a search between the highest and the lowest temperature.
+<li>Finally the results are printed.
 </ol>
 <br><br>
 

@@ -13,12 +13,12 @@ int main(){
     int edad;
     int entrada=0;
 //-----Data entry-----
-    cout<<"Ingresa tu edad: ";
+    cout<<"Enter your age: ";
     cin>>edad;
 //-----Calculation of the entry price-----
    if(edad<4){
     entrada=0;
-    cout<<"¡Tu entrada es gratuita!"<<endl;
+    cout<<"¡Your entry is free!"<<endl;
    }
    else if(entrada>=4 && entrada <=18){
     entrada=5;
@@ -27,8 +27,8 @@ int main(){
     entrada=10;
    }
 //-----Final price printing-----
-   cout<<"El precio de tu entrada es: $"<<entrada<<endl;
-   cout<<"¡Gracias por tu preferencia!"<<endl;
+   cout<<"The price of your ticket is: $"<<entrada<<endl;
+   cout<<"¡Thanks for your preference!"<<endl;
 
 
 return 0; 

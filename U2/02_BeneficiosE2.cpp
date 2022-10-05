@@ -1,7 +1,7 @@
-/* Unidad 2. Beneficios Ej2
-   Autor: Jeannelyn Avila Jimenez
-   Fecha: 26/09/2022
-   Descripción: Problema número dos "Beneficios"
+/* Unit 2. Benefits Ex2
+   Author: Jeannelyn Avila Jimenez
+   Date: 09/26/2022
+   Description: Problem number two "Benefits"
 */
 #include <iostream>
 #include <stdio.h>
@@ -9,23 +9,23 @@
 using namespace std;
 
 int main (){
-    //----Declaración de variables----
+    //----Declaration of variables----
           double calificacion;
           int calculo;
           float bono;
           int cont=1;
-          char texto1[40]="¡Muchas Gracias por Preferirnos!...";
+          string texto1="¡Thank you very much for preferring us!...";
           
-    //----Recolección de datos----
-    cout<<"Ingresa tu puntuación: ";
+    //----Data collection----
+    cout<<"Enter your score: ";
     cin>>calificacion;
-//----Cálculo del bono-----
+//----Bonus calculation-----
     calculo=calificacion*2400;
 
-//----Asignación del bono----   
+//----Bonus Allocation----   
    if(calificacion==0.0){
     bono=0;
-    cout<<"Puntuación inaceptable : "<<endl;
+    cout<<"Unacceptable score : "<<endl;
   
    }
    else if(calificacion==0.4){
@@ -37,19 +37,15 @@ int main (){
    
    }
    else{
-    cout<<"Puntuación inválida."<<endl;
+    cout<<"Invalid punctuation."<<endl;
     cont=0;
    }
-   //----Impresión del bono----
+   //----Voucher printing----
    if(cont==1){
-     cout<<"Tu bono es de: "<<bono<<"%"<<endl;
-   cout<<"Correspondiente a: $"<<calculo<<endl;
+     cout<<"Your bonus is: "<<bono<<"%"<<endl;
+   cout<<"Corresponding to: $"<<calculo<<endl;
    cout<<texto1<<endl;
    }
-
-
-  
-
 
     return 0;
 }

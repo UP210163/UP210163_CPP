@@ -13,69 +13,69 @@ int main()
 //----Declaration of variables----
     int pizza;
     int ingredientes;
-    string ingred;
+
 //----Request rental amount from the user----
-    cout << "¿Desea una pizza Vegetariana (Digita 1) o No Vegetariana (Digita 2)?" << endl;
+    cout << "Do you want a Vegetarian (Digit 1) or Non-Vegetarian (Digit 2) pizza)?" << endl;
     cin >> pizza;
 //-----Printing of the selected menu----
     if (pizza == 1)
     {
-        cout << "Ingredientes Vegetarianos: " << endl;
-        cout << "2. Pimiento" << endl;
+        cout << "Vegetarian Ingredients: " << endl;
+        cout << "2. Pepper" << endl;
         cout << "3. Tofu" << endl;
-        cout << "Digita el número del ingrediente de tu preferencia: " << endl;
+        cout << "Enter the number of the ingredient of your choice: " << endl;
         cin >> ingredientes;
         if (ingredientes == 2)
         {
             cout << "ORDEN:" << endl;
-            cout << "Pizza Vegetariana" << endl;
-            cout << "Ingredientes: " << endl;
-            cout << "Queso Mozarela, Salsa de tomate y Pimiento" << endl;
-            ingred = "Pimiento";
+            cout << "Vegetarian pizza" << endl;
+            cout << "Ingredients: " << endl;
+            cout << "Mozzarella cheese, tomato sauce and pepper" << endl;
+         
         }
         else
-        {
+        {      
             cout << "ORDEN:" << endl;
-            cout << "Pizza Vegetariana" << endl;
-            cout << "Ingredientes: " << endl;
-            cout << "Queso Mozarela, Salsa de tomate y Tofu" << endl;
+            cout << "Vegetarian pizza" << endl;
+            cout << "Ingredients: " << endl;
+            cout << "Mozzarella cheese, tomato sauce and tofu" << endl;
         }
     }
     else if (pizza == 2)
     {
-        cout << "Ingredientes  No Vegetarianos: " << endl;
+        cout << "Non Vegetarian Ingredients: " << endl;
         cout << "4.Pepperoni" << endl;
-        cout << "5.Jamón" << endl;
-        cout << "6.Salmón" << endl;
-        cout << "Digita el número del ingrediente de tu preferencia: " << endl;
+        cout << "5.Ham" << endl;
+        cout << "6.Salmon" << endl;
+        cout << "Enter the number of the ingredient of your choice: " << endl;
         cin >> ingredientes;
         if (ingredientes == 4)
         {
             cout << "ORDEN:" << endl;
-            cout << "Pizza No Vegetariana" << endl;
-            cout << "Ingredientes: " << endl;
-            cout << "Queso Mozarela, Salsa de tomate y Pepperoni" << endl;
+            cout << "Non Vegetarian Pizza" << endl;
+            cout << "Ingredients: " << endl;
+            cout << "Mozzarella cheese, Tomato sauce and Pepperoni" << endl;
         }
         else if (ingredientes == 5)
         {
             cout << "ORDEN:" << endl;
-            cout << "Pizza Vegetariana" << endl;
-            cout << "Ingredientes: " << endl;
-            cout << "Queso Mozarela, Salsa de tomate y Jamón" << endl;
+            cout << "Non Vegetarian Pizza" << endl;
+            cout << "Ingredients: " << endl;
+            cout << "Mozzarella cheese, Tomato sauce and Ham" << endl;
         }
         else
         {
             cout << "ORDEN:" << endl;
-            cout << "Pizza Vegetariana" << endl;
-            cout << "Ingredientes: " << endl;
-            cout << "Queso Mozarela, Salsa de tomate y Salmón" << endl;
+            cout << "Non Vegetarian Pizza" << endl;
+            cout << "Ingredients: " << endl;
+            cout << "Mozzarella cheese, Tomato sauce and salmon" << endl;
         }
     }
     else
     {
-        cout << "Opción inválida";
+        cout << "Invalid option";
     }
-    cout << ingred;
+    
 
     return 0;
 }

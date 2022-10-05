@@ -10,30 +10,32 @@ using namespace std;
 
 int main(){
 //----Declaration of variables----
-      int cont=1, cont1;
-      float temperatura=0,may, men, cont2;
-      float sumaTem=0;
-    
+    float temperatura;
+    float sumAcum = 0;
+    int min = 9999, max = -9999;
+    int cont = 1;
 
-      do{
-        cout<<"Give me the temperature: ";
-        cin>>temperatura;
-        sumaTem+=temperatura;
-        may=temperatura;
-        men=temperatura;
-        cont++;
-          if(men<cont1){
-            cont1=men;
+//-----Data collection-----
+    do
+    {
+        cout << "Give me the temperature: " << endl;
+        cin >> temperatura;
+        sumAcum +=temperatura;
+
+        cont ++;
+        if (temperatura <= min)
+        {
+            min=temperatura;
         }
-         if(may>cont2){
-            cont2=may;
+        if (temperatura >= max)
+        {
+            max=temperatura;
         }
+    } while (cont <=6);
+//-----Printing of the results----- 
+    cout << "The average of temperature today is : " << sumAcum/6 <<endl;
+    cout << "The minimum temperature :" << min<< endl;
+    cout << "The maximum temperature :" << max << endl;
 
-      }while(cont<=6);
-      
-      cout<<"The average of temperature today is: "<<sumaTem/6<<endl;
-      cout<<"Mayor: "<<cont2<<endl;
-      cout<<"Smaller: "<<cont1<<endl;
-
-
+return 0;
 }

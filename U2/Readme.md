@@ -3,6 +3,8 @@
 EXERCISE 1: Corresponding tax according to the amount of rent of the client<img src="UP210163_CPP/../../imagenes/porcentaje.png" width=40>
 </h1>
 <h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
+
 
 ```c++
     /----Instanced Libraries----
@@ -24,47 +26,53 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
       cout<<"Ingresa el monto de tu renta mensualmente:";
       cin>>renta;
  
-    //----Calculation and printing of taxes----
-      if(renta<10000){
-        cout<<texto1<<"5%"<<endl;
-        descuento= (renta/100)*5;
-        pago=descuento;
-        cout<<texto2<<pago<<endl;
-    
-      }
-      if(renta>=10000 && renta<20000){
-        cout<<texto1<<"15%"<<endl;
-        descuento= (renta/100)*15;
-        pago=descuento;
-        cout<<texto2<<pago<<endl;
-    
-      }
-       if(renta>=20000 && renta<35000){
-        cout<<texto1<<"20%"<<endl;
-        descuento= (renta/100)*20;
-        pago=descuento;
-        cout<<texto2<<pago<<endl;
-    
-      }
-       if(renta>=35000 && renta<60000){
-       cout<<texto1<<"30%"<<endl;
-        descuento= (renta/100)*30;
-        pago=descuento;
-        cout<<texto2<<pago<<endl;
-    
-      }
-       if(renta>=60000){
-        cout<<texto1<<"45%"<<endl;
-        descuento= (renta/100)*45;
-        pago=descuento;
-        cout<<texto2<<pago<<endl;
-    
-      }
-        return 0;
-    }    
+ ```
+ 
+ <div><h4>Process & Output </h4></div>
+
+
+```c++
+        //----Calculation and printing of taxes----
+          if(renta<10000){
+            cout<<texto1<<"5%"<<endl;
+            descuento= (renta/100)*5;
+            pago=descuento;
+            cout<<texto2<<pago<<endl;
+
+          }
+          if(renta>=10000 && renta<20000){
+            cout<<texto1<<"15%"<<endl;
+            descuento= (renta/100)*15;
+            pago=descuento;
+            cout<<texto2<<pago<<endl;
+
+          }
+           if(renta>=20000 && renta<35000){
+            cout<<texto1<<"20%"<<endl;
+            descuento= (renta/100)*20;
+            pago=descuento;
+            cout<<texto2<<pago<<endl;
+
+          }
+           if(renta>=35000 && renta<60000){
+           cout<<texto1<<"30%"<<endl;
+            descuento= (renta/100)*30;
+            pago=descuento;
+            cout<<texto2<<pago<<endl;
+
+          }
+           if(renta>=60000){
+            cout<<texto1<<"45%"<<endl;
+            descuento= (renta/100)*45;
+            pago=descuento;
+            cout<<texto2<<pago<<endl;
+
+          }
+            return 0;
+        }    
 ```
 
-<h3>Principal function</h3>
+## Principal function
 <p> Show the user the corresponding tax to pay according to the total amount of rent </p>
 <ol>
 <li>The user enters the personal amount of rent
@@ -97,6 +105,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
 <h1 align="left"> 
 EXERCISE 2: Benefits (Bonus assigned according to scores)<img src="UP210163_CPP/../../imagenes/beneficios.png" width=55></h1>
 <h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
 
 ```c++
 #include <iostream>
@@ -115,6 +124,14 @@ int main (){
     //----Data collection----
     cout<<"Enter your score: ";
     cin>>calificacion;
+    
+ ```
+
+ <div><h4>Process & Output </h4></div>
+
+
+```c++
+    
 //----Bonus calculation-----
     calculo=calificacion*2400;
 
@@ -146,7 +163,7 @@ int main (){
     return 0;
 }
 ```
-<h3>Principal function</h3>
+## Principal function
 <p> This program consists of assigning employees their bonus corresponding to their performance score; the score must be [0.0, 0.4 or greater than 0.6], any other score outside the established ones will be rejected. The percentage equal to your performance score where 100% percent is $2400 and 0% is $0. </p>
 <ol>
 <li>User enters their score
@@ -175,8 +192,10 @@ int main (){
 <h1 align="left"> 
  EXERCISE 3: Tickets (Price corresponding to pay according to your age) <img src="UP210163_CPP/../../imagenes/boleto.png" width=55></h1>
 <h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
 
 ```c++
+
 #include <iostream>
 #include <stdio.h>
 
@@ -189,6 +208,13 @@ int main(){
 //-----Data entry-----
     cout<<"Enter your age: ";
     cin>>edad;
+    
+```
+
+ <div><h4>Process & Output </h4></div>
+
+
+```c++
 //-----Calculation of the entry price-----
    if(edad<4){
     entrada=0;
@@ -209,7 +235,7 @@ return 0;
 }
 ```
 
-<h3>Principal function</h3>
+## Principal function
 <p> This program works based on the age entered by the user, depending on their age a price will be assigned to their ticket</p>
 <ol>
 <li>The user enters his age
@@ -238,8 +264,10 @@ return 0;
 <h1 align="left"> 
  EXERCISE 4: Pizza (Sample of the menu according to the client's selection) <img src="UP210163_CPP/../../imagenes/pizza.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
 
 ```c++
+
 #include <iostream>
 #include <stdio.h>
 
@@ -254,6 +282,13 @@ int main()
 //----Request rental amount from the user----
     cout << "Do you want a Vegetarian (Digit 1) or Non-Vegetarian (Digit 2) pizza)?" << endl;
     cin >> pizza;
+    
+```
+
+ <div><h4>Process & Output </h4></div>
+
+
+```c++
 //-----Printing of the selected menu----
     if (pizza == 1)
     {
@@ -317,7 +352,7 @@ int main()
     return 0;
 }
 ```
-<h3>Principal function</h3>
+## Principal function
 <p> This program is based on taking the client's order with the established options and at the end its complete order is printed to be seen by the user.</p>
 <ol>
 <li>The program asks the user what type of pizza he wants
@@ -346,8 +381,10 @@ int main()
 <h1 align="left"> 
   EXERCISE 5: Temperatures (calculation of the average, minimum and maximum amount according to the temperature given by the user)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
 
 ```c++
+
 #include <iostream>
 
 using namespace std;
@@ -376,6 +413,11 @@ int main(){
             max=temperatura;
         }
     } while (cont <=6);
+```
+<div><h4>Process & Output </h4></div>
+
+
+```c++
 //-----Printing of the results----- 
     cout << "The average of temperature today is : " << sumAcum/6 <<endl;
     cout << "The minimum temperature :" << min<< endl;
@@ -384,7 +426,7 @@ int main(){
 return 0;
 }
 ```
-<h3>Principal function</h3>
+## Principal function
 <p> This program collects temperatures given by the user to carry out the following procedure</p>
 <ol>
 <li>User enters 6 temperatures.

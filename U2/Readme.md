@@ -174,16 +174,12 @@ int main (){
 
 <h3> Final results</h3>
 <ol type="A>
-<li>For amount less than $10,000
-    <img src="UP210163_CPP/../../imagenes/menor10.png">
-<li>For an amount greater than or equal to $10,000 or less than $20,000
-    <img src="UP210163_CPP/../../imagenes/menor20.png">
- <li>For an amount greater than or equal to $20,000 or less than $35,000
-    <img src="UP210163_CPP/../../imagenes/menor35.png">
- <li>For an amount greater than or equal to $35,000 or less than $60,000
-    <img src="UP210163_CPP/../../imagenes/menor60.png">
- <li>For amounts greater than or equal to $60,000
-    <img src="UP210163_CPP/../../imagenes/mayor60.png">
+<li>For a score of 0.0
+    <img src="UP210163_CPP/../../imagenes/E2_0.0.png">
+<li>For a score of 0.4
+    <img src="UP210163_CPP/../../imagenes/E2_0.4.png">
+ <li>For a score of 0.6
+    <img src="UP210163_CPP/../../imagenes/E2_0.6.png">
   </ol>
  
  <br><br><br>

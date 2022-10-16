@@ -242,16 +242,12 @@ return 0;
 
 <h3> Final results</h3>
 <ol type="A>
-<li>For amount less than $10,000
-    <img src="UP210163_CPP/../../imagenes/menor10.png">
-<li>For an amount greater than or equal to $10,000 or less than $20,000
-    <img src="UP210163_CPP/../../imagenes/menor20.png">
- <li>For an amount greater than or equal to $20,000 or less than $35,000
-    <img src="UP210163_CPP/../../imagenes/menor35.png">
- <li>For an amount greater than or equal to $35,000 or less than $60,000
-    <img src="UP210163_CPP/../../imagenes/menor60.png">
- <li>For amounts greater than or equal to $60,000
-    <img src="UP210163_CPP/../../imagenes/mayor60.png">
+<li>For less than 4 years
+    <img src="UP210163_CPP/../../imagenes/E3_3.png">
+<li>For more than 4 years or less than 18 years
+    <img src="UP210163_CPP/../../imagenes/E3_7.png">
+ <li>For over 18 years
+    <img src="UP210163_CPP/../../imagenes/E3_19.png">
  </ol>
  
  <br><br><br>
@@ -359,16 +355,10 @@ int main()
 
 <h3> Final results</h3>
 <ol type="A>
-<li>For amount less than $10,000
-    <img src="UP210163_CPP/../../imagenes/menor10.png">
-<li>For an amount greater than or equal to $10,000 or less than $20,000
-    <img src="UP210163_CPP/../../imagenes/menor20.png">
- <li>For an amount greater than or equal to $20,000 or less than $35,000
-    <img src="UP210163_CPP/../../imagenes/menor35.png">
- <li>For an amount greater than or equal to $35,000 or less than $60,000
-    <img src="UP210163_CPP/../../imagenes/menor60.png">
- <li>For amounts greater than or equal to $60,000
-    <img src="UP210163_CPP/../../imagenes/mayor60.png">
+<li>Vegetarian pizza selection menu
+    <img src="UP210163_CPP/../../imagenes/E4_VE.png">
+<li>Selection menu of a non-vegetarian pizza
+    <img src="UP210163_CPP/../../imagenes/E4_NOV.png">
  </ol>
  
  <br><br><br>
@@ -434,16 +424,188 @@ return 0;
 
 <h3> Final results</h3>
 <ol type="A>
-<li>For amount less than $10,000
-    <img src="UP210163_CPP/../../imagenes/menor10.png">
-<li>For an amount greater than or equal to $10,000 or less than $20,000
-    <img src="UP210163_CPP/../../imagenes/menor20.png">
- <li>For an amount greater than or equal to $20,000 or less than $35,000
-    <img src="UP210163_CPP/../../imagenes/menor35.png">
- <li>For an amount greater than or equal to $35,000 or less than $60,000
-    <img src="UP210163_CPP/../../imagenes/menor60.png">
- <li>For amounts greater than or equal to $60,000
-    <img src="UP210163_CPP/../../imagenes/mayor60.png">
+<li>Temperature calculation example
+    <img src="UP210163_CPP/../../imagenes/E5.png">
  </ol>
  
  <br><br><br>
+
+<h1 align="left"> 
+  EXERCISE 6: Products (Calculating an invoice based on product prices)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+<h2> Code structure (C++)</h2>
+<div><h4>Input & Process</h4></div>
+
+```c++
+//----Declaration of variables----
+        int cant,precio;
+        int total=0,fac=0;
+        int cont=0;
+//-----Data collection-----
+
+        do{
+            cout<<"Enter the number of products: ";
+            cin>>cant;
+            if(cant==0){
+                cout<<"Finalizing invoice..."<<endl;
+                break;
+            }
+            cout<<"Enter the price of the product: $";
+            cin>>precio;
+           
+            total=cant*precio;
+            fac=total+fac;
+```
+<div><h4> Output </h4></div>
+
+```c++
+  }while (cant!=0); 
+      
+          cout<<"The total of your bill is: $"<<fac<<endl;
+        
+
+    return 0;
+ }
+```
+## Principal function
+<p> This program collects both quantity and price of various items provided by the user.</p>
+<ol>
+<li>The user enters the quantity of the product.
+<li>After entering the price of said product.
+<li>If you want to finalize the invoice, type 0.
+<li>The program prints the total.
+</ol>
+<br><br>
+
+<h3> Final results</h3>
+<ol type="A>
+<li>Invoice example
+    <img src="UP210163_CPP/../../imagenes/E6.png">
+ </ol>
+ 
+ <br><br><br>
+
+<h1 align="left"> 
+  EXERCISE 7: Decimal to Binary (Convert a number from decimal system to binary system)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+<h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
+
+```c++
+#include <iostream>
+
+using namespace std;
+ int main(){
+    //----Declaration of variables----
+    int num;
+    string resultado;
+//-----Data collection-----
+    do{
+
+        cout<<"Ingresa el numero a convertir: ";
+        cin>>num;
+```
+<div><h4>Process & Output </h4></div>
+```c++
+if(num>0){
+            cout<<"Mayor a cero"<<endl; 
+            while(num!=0){
+            if(num%2==0){
+            resultado='0'+resultado;//The current result with the previous
+            }
+            else 
+            resultado='1'+resultado;
+            num/=2;
+            
+        }
+        }
+        else if(num==0){
+            cout<<"0"<<endl;
+        }
+        else{
+            cout<<"Menor a cero"<<endl;
+        }
+   
+    
+
+    }while(num<0);
+    cout<<resultado<<endl;
+
+
+    return 0;
+ }
+```
+## Principal function
+<p> The only and main function is to convert a number in decimal system entered by the user to a binary system.</p>
+<ol>
+<li>The user enters a number in the decimal system.
+<li>The program executes the conversion process.
+<li>The number previously entered is now printed in decimal system.
+</ol>
+<br><br>
+
+<h3> Final results</h3>
+<ol type="A>
+<li>Conversion of number 15 in Decimal to Binary
+    <img src="UP210163_CPP/../../imagenes/E7.png">
+ </ol>
+ 
+ <br><br><br>
+<h1 align="left"> 
+  EXERCISE 8: Multiplication table (Printing the numerical table of a number)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+<h2> Code structure (C++)</h2>
+<div><h4>Input</h4></div>
+
+```c++
+#include <iostream>
+
+using namespace std;
+ int main(){
+ //----Declaration of variables----
+   int num,lon;
+   int mul=0,cont=0;
+
+//-----Data collection-----
+   cout<<"Ingresa un número: ";
+   cin>>num;
+   cout<<"Longitud de la tabla: ";
+   cin>>lon;
+```
+<div><h4>Process & Output </h4></div>
+```c++
+for(int i=0;i<lon;i++){
+    for(int j=0;j<=48;j++){
+         cout<<"-";
+         
+      }
+      cout<<endl;
+      mul=num*i;
+      cout<<"|"<<"\t"<<num<<"\tx"<<"\t"<<i<<"\t="<<"\t"<<mul<<"\t|"<<endl;
+   
+
+    
+   }
+
+
+    return 0;
+ }
+```
+## Principal function
+<p> This program prints the number table of a number in a table format using the tab function.</p>
+<ol>
+<li>The user enters the main number of the table.
+<li>Then the length of said table is entered.
+<li>The program performs the calculation and accommodation of the data.
+<li>The table is printed.
+</ol>
+<br><br>
+
+<h3> Final results</h3>
+<ol type="A>
+<li>Conversion of number 15 in Decimal to Binary
+    <img src="UP210163_CPP/../../imagenes/E8.png">
+ </ol>
+ 
+ <br><br><br>
+
+
+
+

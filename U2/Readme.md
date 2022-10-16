@@ -7,6 +7,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
 
 
 ```c++
+
     /----Instanced Libraries----
     #include <iostream>
     #include <stdio.h>
@@ -32,6 +33,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
 
 
 ```c++
+
         //----Calculation and printing of taxes----
           if(renta<10000){
             cout<<texto1<<"5%"<<endl;
@@ -70,6 +72,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
           }
             return 0;
         }    
+        
 ```
 
 ## Principal function
@@ -108,6 +111,7 @@ EXERCISE 2: Benefits (Bonus assigned according to scores)<img src="UP210163_CPP/
 <div><h4>Input</h4></div>
 
 ```c++
+                                                                                                              
 #include <iostream>
 #include <stdio.h>
 
@@ -162,6 +166,7 @@ int main (){
 
     return 0;
 }
+                              
 ```
 ## Principal function
 <p> This program consists of assigning employees their bonus corresponding to their performance score; the score must be [0.0, 0.4 or greater than 0.6], any other score outside the established ones will be rejected. The percentage equal to your performance score where 100% percent is $2400 and 0% is $0. </p>
@@ -211,6 +216,7 @@ int main(){
 
 
 ```c++
+    
 //-----Calculation of the entry price-----
    if(edad<4){
     entrada=0;
@@ -229,6 +235,7 @@ int main(){
 
 return 0; 
 }
+                                              
 ```
 
 ## Principal function
@@ -281,6 +288,7 @@ int main()
 
 
 ```c++
+                                                                                    
 //-----Printing of the selected menu----
     if (pizza == 1)
     {
@@ -343,6 +351,7 @@ int main()
 
     return 0;
 }
+                                
 ```
 ## Principal function
 <p> This program is based on taking the client's order with the established options and at the end its complete order is printed to be seen by the user.</p>
@@ -399,11 +408,13 @@ int main(){
             max=temperatura;
         }
     } while (cont <=6);
+                       
 ```
 <div><h4>Process & Output </h4></div>
 
 
 ```c++
+    
 //-----Printing of the results----- 
     cout << "The average of temperature today is : " << sumAcum/6 <<endl;
     cout << "The minimum temperature :" << min<< endl;
@@ -411,6 +422,7 @@ int main(){
 
 return 0;
 }
+    
 ```
 ## Principal function
 <p> This program collects temperatures given by the user to carry out the following procedure</p>
@@ -436,6 +448,7 @@ return 0;
 <div><h4>Input & Process</h4></div>
 
 ```c++
+                                                                                                                       
 //----Declaration of variables----
         int cant,precio;
         int total=0,fac=0;
@@ -454,10 +467,12 @@ return 0;
            
             total=cant*precio;
             fac=total+fac;
+                                                     
 ```
 <div><h4> Output </h4></div>
 
 ```c++
+                                                     
   }while (cant!=0); 
       
           cout<<"The total of your bill is: $"<<fac<<endl;
@@ -490,6 +505,7 @@ return 0;
 <div><h4>Input</h4></div>
 
 ```c++
+    
 #include <iostream>
 
 using namespace std;
@@ -502,9 +518,12 @@ using namespace std;
 
         cout<<"Ingresa el numero a convertir: ";
         cin>>num;
+    
 ```
 <div><h4>Process & Output </h4></div>
+    
 ```c++
+    
 if(num>0){
             cout<<"Mayor a cero"<<endl; 
             while(num!=0){
@@ -532,6 +551,7 @@ if(num>0){
 
     return 0;
  }
+                          
 ```
 ## Principal function
 <p> The only and main function is to convert a number in decimal system entered by the user to a binary system.</p>
@@ -555,6 +575,7 @@ if(num>0){
 <div><h4>Input</h4></div>
 
 ```c++
+                                                                                                                             
 #include <iostream>
 
 using namespace std;
@@ -568,8 +589,10 @@ using namespace std;
    cin>>num;
    cout<<"Longitud de la tabla: ";
    cin>>lon;
+                                 
 ```
 <div><h4>Process & Output </h4></div>
+                                 
 ```c++
 for(int i=0;i<lon;i++){
     for(int j=0;j<=48;j++){

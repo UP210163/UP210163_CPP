@@ -443,7 +443,7 @@ return 0;
  <br><br><br>
 
 <h1 align="left"> 
-  EXERCISE 6: Products (Calculating an invoice based on product prices)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+  EXERCISE 6: Products (Calculating an invoice based on product prices)<img src="UP210163_CPP/../../imagenes/producto.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
 <div><h4>Input & Process</h4></div>
 
@@ -500,7 +500,7 @@ return 0;
  <br><br><br>
 
 <h1 align="left"> 
-  EXERCISE 7: Decimal to Binary (Convert a number from decimal system to binary system)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+  EXERCISE 7: Decimal to Binary (Convert a number from decimal system to binary system)<img src="UP210163_CPP/../../imagenes/codigo-binario.png" width=70><h1/>
 <h2> Code structure (C++)</h2>
 <div><h4>Input</h4></div>
 
@@ -570,7 +570,7 @@ if(num>0){
  
  <br><br><br>
 <h1 align="left"> 
-  EXERCISE 8: Multiplication table (Printing the numerical table of a number)<img src="UP210163_CPP/../../imagenes/clima.png" width=55><h1/>
+  EXERCISE 8: Multiplication table (Printing the numerical table of a number)<img src="UP210163_CPP/../../imagenes/multiplicar.png" width=55><h1/>
 <h2> Code structure (C++)</h2>
 <div><h4>Input</h4></div>
 

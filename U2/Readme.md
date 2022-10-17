@@ -90,7 +90,7 @@ EXERCISE 1: Corresponding tax according to the amount of rent of the client<img 
 </ol>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>For amount less than $10,000
     <img src="UP210163_CPP/../../imagenes/menor10.png">
 <li>For an amount greater than or equal to $10,000 or less than $20,000
@@ -178,7 +178,7 @@ int main (){
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>For a score of 0.0
     <img src="UP210163_CPP/../../imagenes/E2_0.0.png">
 <li>For a score of 0.4
@@ -248,7 +248,7 @@ return 0;
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>For less than 4 years
     <img src="UP210163_CPP/../../imagenes/E3_3.png">
 <li>For more than 4 years or less than 18 years
@@ -363,7 +363,7 @@ int main()
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>Vegetarian pizza selection menu
     <img src="UP210163_CPP/../../imagenes/E4_VE.png">
 <li>Selection menu of a non-vegetarian pizza
@@ -435,7 +435,7 @@ return 0;
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>Temperature calculation example
 <img src="UP210163_CPP/../../imagenes/E5ej.png">
  </ol>
@@ -492,7 +492,7 @@ return 0;
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>Invoice example
     <img src="UP210163_CPP/../../imagenes/E6ej.png">
  </ol>
@@ -563,7 +563,7 @@ if(num>0){
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
+<ol type="A">
 <li>Conversion of number 15 in Decimal to Binary
     <img src="UP210163_CPP/../../imagenes/E7ej.png">
  </ol>
@@ -622,9 +622,9 @@ for(int i=0;i<lon;i++){
 <br><br>
 
 <h3> Final results</h3>
-<ol type="A>
-<li>Conversion of number 15 in Decimal to Binary
-    <img src="UP210163_CPP/../../imagenes/E8ej.png">
+<ol type="A">
+<li>Conversion of number 15 in Decimal to Binary<br>
+ <img src="UP210163_CPP/../../imagenes/E8ej.png">
  </ol>
  
  <br><br><br>

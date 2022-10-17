@@ -436,7 +436,8 @@ return 0;
 
 <h3> Final results</h3>
 <ol type="A>
-<li>Temperature calculation example<img src="UP210163_CPP/../../imagenes/E5.png">
+<li>Temperature calculation example
+<img src="UP210163_CPP/../../imagenes/E5ej.png">
  </ol>
  
  <br><br><br>
@@ -493,7 +494,7 @@ return 0;
 <h3> Final results</h3>
 <ol type="A>
 <li>Invoice example
-    <img src="UP210163_CPP/../../imagenes/E6.png">
+    <img src="UP210163_CPP/../../imagenes/E6ej.png">
  </ol>
  
  <br><br><br>
@@ -564,7 +565,7 @@ if(num>0){
 <h3> Final results</h3>
 <ol type="A>
 <li>Conversion of number 15 in Decimal to Binary
-    <img src="UP210163_CPP/../../imagenes/E7.png">
+    <img src="UP210163_CPP/../../imagenes/E7ej.png">
  </ol>
  
  <br><br><br>
@@ -623,7 +624,7 @@ for(int i=0;i<lon;i++){
 <h3> Final results</h3>
 <ol type="A>
 <li>Conversion of number 15 in Decimal to Binary
-    <img src="UP210163_CPP/../../imagenes/E8.png">
+    <img src="UP210163_CPP/../../imagenes/E8ej.png">
  </ol>
  
  <br><br><br>

@@ -436,8 +436,7 @@ return 0;
 
 <h3> Final results</h3>
 <ol type="A>
-<li>Temperature calculation example
-    <img src="UP210163_CPP/../../imagenes/E5.png">
+<li>Temperature calculation example<img src="UP210163_CPP/../../imagenes/E5.png">
  </ol>
  
  <br><br><br>

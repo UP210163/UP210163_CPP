@@ -714,7 +714,18 @@ int main(){
 ```
 
 ## Principal function
-
+<ol>
+ <li> Ask the user for the range (a and b).
+ <li> Obtain the point c.
+ <li> Get the y-values when its value is a, b and c.
+ <li> If the Y(c) value is greater than or equal to 0.01 or less than or equal to -0.01 enter a while loop.
+<ol/>
+<ol>
+<li> Enter an If to select half.
+<li> if ((ya * yc) < 0) then b=c, otherwise a=c.
+<li> Get the y values with the new values.
+<li> When Y(c) is between 0.01 and -0.01 exit the while.
+<ol/>
 <h3> Final results</h3>
 <ol type="A">
 <li>Example

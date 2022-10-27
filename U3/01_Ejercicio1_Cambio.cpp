@@ -3,52 +3,40 @@ Date: 21/10/2022
 Author: Jeannelyn Avila Jimenez.
 Description: EJercicio 1 "Cambio"
 */
-
 #include <iostream>
-
 using namespace std;
 
 void obtenerCambio(int);
+void imprimirCambio();
 
-void imprimirCambio(int);
+int denominaciones[9]={500,200,100,50,20,10,5,2,1};
+int cantidadBilletes[9]={0};
+int residuo=0;
 
-int quin = 0, doci = 0, cien = 0, cinc = 0, vein = 0, diez = 0, cinco = 0, dos = 0, uno = 0;
+int main(){
+    int dinero;
 
-int main()
-{
-    int cant;
-    cout << "Ingresa un monto: ";
-    cin >> cant;
-    obtenerCambio(cant);
-    imprimirCambio(cant);
-    return 0;
+    cout<<"Ingresa el monto: ";
+    cin>>dinero;
+    obtenerCambio (dinero);
+    imprimirCambio ();
+
+return 0;
 }
-void obtenerCambio(int cambio)
-{
-    do
-    {
-        ((cambio - 500) >= 0) ? quin++, cambio -= 500 
-       : ((cambio - 200) >= 0) ? doci++, cambio -= 200 
-       : ((cambio - 100) >= 0) ? cien++, cambio -= 100 
-       : ((cambio - 50) >= 0) ? cinc++, cambio -= 50 
-       : ((cambio - 20) >= 0) ? vein++, cambio -= 20 
-       : ((cambio - 10) >= 0) ? diez++, cambio -= 10 
-       : ((cambio - 5) >= 0) ? cinco++, cambio -= 5 
-       : ((cambio - 2) >= 0) ? dos++, cambio -= 2 
-       : ((cambio - 1) >= 0) ? uno++, cambio -= 1 
-       : uno;
-    } while (cambio > 0);
+void obtenerCambio (int monto){
+    
+    for(int denominacion=0; denominacion<9; denominacion++){
+        residuo=(denominacion==0)?monto:residuo;
+        cantidadBilletes[denominacion]=residuo/denominaciones[denominacion];
+
+        residuo=residuo%denominaciones[denominacion];
+    }
 }
-void imprimirCambio(int cambio)
-{
-    cout << "Tu cambio es:  $" << cambio << "\n";
-    cout << "Billete de $500: " << quin << endl;
-    cout << "Billete de $200: " << doci << endl;
-    cout << "Billete de $100: " << cien << endl;
-    cout << "Billete de $50: " << cinc << endl;
-    cout << "Billete de $20: " << vein << endl;
-    cout << "Moneda de $10: " << diez << endl;
-    cout << "Moneda de $5: " << cinco << endl;
-    cout << "Moneda de $2: " << dos << endl;
-    cout << "Moneda de $1: " << uno << endl;
+void imprimirCambio(){
+    for(int cambio=0; cambio<9;cambio++){
+        string tipo;
+
+        tipo=(cambio<5)?"Billetes":"Monedas";
+        cout<<tipo<<" de $ "<<denominaciones[cambio]<<" : "<<cantidadBilletes[cambio]<<endl;
+    }
 }

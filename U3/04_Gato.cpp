@@ -6,6 +6,8 @@ Description: EJercicio "Juego del Gato"
 
 #include <iostream>
 
+
+
 using namespace std;
 
 void Estructura(int);
@@ -21,7 +23,7 @@ bool VerificarGanador(int Jugada);
 int main(){
     int tablero,jugador1,jugador2,computadora,jugada;
     bool casillaocupada = true, ganador = true;
-    Tablero(tablero);
+    Estructura(tablero);
     ganador = VerificarGanador(jugada);
     do{
     jugada = SeleccionarJugada();
@@ -30,13 +32,13 @@ int main(){
     {
         do
         {
-            cout << "Casilla invalida\n";
+            cout<<"\x1B[34m"<<"Casilla invalida\n"<<"\033[0m";
             break;
         } while (casillaocupada == true);
     }
     else if (casillaocupada == false)
     {
-        system ("CLS");
+        system ("clear");
         ReemplazarCasilla(jugada);
         Estructura(tablero);
         Turno++;
@@ -51,7 +53,7 @@ int SeleccionarJugada(){
     int Jugada;
     do
     {
-    cout << "Dame tu jugada: \n";
+    cout <<"\x1B[32m"<<"\x1B[44m"<<"Dame tu jugada: \n"<<"\033[0m";
     cin >> Jugada;
     } while (Jugada < 0 && Jugada >= 9);
     
@@ -74,6 +76,7 @@ int row = Jugada/10, col = Jugada-1;
     }
 
 void ReemplazarCasilla(int Jugada){
+
     if (Turno%2==0){
     int row = Jugada/10, col = Jugada - 1;
     AreaJ[row][col]='O';
@@ -86,7 +89,7 @@ void ReemplazarCasilla(int Jugada){
     
 }
 
-void Tablero(int){
+void Estructura(int){
     int x=0, y=0;
     for (int fila = 0; fila < 5; fila++)
     {

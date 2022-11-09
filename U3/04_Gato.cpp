@@ -53,7 +53,7 @@ int SeleccionarJugada(){
     int Jugada;
     do
     {
-    cout <<"\x1B[32m"<<"\x1B[44m"<<"Dame tu jugada: \n"<<"\033[0m";
+    cout <<"\x1B[32m"<<"Dame tu jugada: \n"<<"\033[0m";
     cin >> Jugada;
     } while (Jugada < 0 && Jugada >= 9);
     
@@ -76,7 +76,7 @@ int row = Jugada/10, col = Jugada-1;
     }
 
 void ReemplazarCasilla(int Jugada){
-
+    
     if (Turno%2==0){
     int row = Jugada/10, col = Jugada - 1;
     AreaJ[row][col]='O';
@@ -96,18 +96,18 @@ void Estructura(int){
             for (int columna = 0; columna < 9; columna++)
             {
                 if (fila== 1 || fila == 3){
-                    cout << "-";
+                    cout<<"\x1B[32m"<<"-"<<"\033[0m";
                 }else if (columna==1 || columna == 4 || columna == 7)
                 {
                     cout << AreaJ[x][y];
                     y++;
                 }else
                 {
-                    cout << " ";
+                    cout <<" ";
                 }
                 if (columna==2 || columna == 5)
                 {
-                    cout<<"|";
+                    cout<<"\x1B[32m"<<"|"<<"\033[0m";
                 }
             }
         cout << "\n";

@@ -6,142 +6,284 @@ Description: EJercicio "Juego del Gato"
 
 #include <iostream>
 
-
-
 using namespace std;
 
-void Estructura(int);
-int Turno = 1;
-char AreaJ[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-int SeleccionarJugada();
-void ReemplazarCasilla(int Jugada);
-bool comprobarJugadaOcupada(int Jugada);
-void ModoDeJuego(int);
-bool VerificarGanador(int Jugada);
+char coordenadasGato[6][11];
+char areaJuego[3][3]={{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
+int turnojugador=1;
+int contador=0;
 
+int seleccionarJugada(){
 
-int main(){
-    int tablero,jugador1,jugador2,computadora,jugada;
-    bool casillaocupada = true, ganador = true;
-    Estructura(tablero);
-    ganador = VerificarGanador(jugada);
-    do{
-    jugada = SeleccionarJugada();
-    casillaocupada = comprobarJugadaOcupada(jugada);
-    if (casillaocupada == true)
-    {
-        do
-        {
-            cout<<"\x1B[34m"<<"Casilla invalida\n"<<"\033[0m";
-            break;
-        } while (casillaocupada == true);
-    }
-    else if (casillaocupada == false)
-    {
-        system ("clear");
-        ReemplazarCasilla(jugada);
-        Estructura(tablero);
-        Turno++;
-    }
-    }while(ganador == false);
-    return 0;
-}
-
-
-
-int SeleccionarJugada(){
-    int Jugada;
+    int tiro;
     do
     {
-    cout <<"\x1B[32m"<<"Dame tu jugada: \n"<<"\033[0m";
-    cin >> Jugada;
-    } while (Jugada < 0 && Jugada >= 9);
-    
-    return Jugada;
+        cout << "Dame tu jugada: ";
+        cin >> tiro;
+        contador++;
+    } while (tiro>9 && tiro<0);
+    return tiro;
+
+}
+
+bool elegirGanador(char juego[3][3]){
+    if(juego[0][0]=='x' || juego[0][0]=='0'){
+        if (juego[0][0]==juego[0][1] && juego[0][0]==juego[0][2]){
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+            
+        if (juego[0][0]==juego[1][0] && juego[0][0]==juego[2][0]){
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+            
+    }
+    if (juego[1][1]=='0' || juego[1][1]=='x'){
+            if(juego[1][1]==juego[0][0] && juego[1][1]==juego[2][2]){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            if(juego[1][1]==juego[1][0] && juego[1][1]==juego[1][2]){
+                if(juego[1][1]=='0'){
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            if(juego[1][1]==juego[2][0] && juego[1][1]==juego[0][2]){
+                    return true;
+                }    
+                else
+                {
+                    return false;
+                }
+            if(juego[1][1]==juego[0][1] && juego[1][1]==juego[2][1]){
+                    return true;
+            }    
+                else
+                {
+                    return false;
+                }
+    }
+    if(juego[2][2]=='x' || juego[2][2]=='0'){
+        if (juego[2][2]==juego[2][0] && juego[2][2]==juego[2][1]){
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+            
+        if (juego[2][2]==juego[0][2] && juego[2][2]==juego[1][2]){
+                return true;
+            }    
+            else
+            {
+                return false;
+            }
+            
+        
+    }
 }
 
 
-
-bool comprobarJugadaOcupada(int Jugada){
-int row = Jugada/10, col = Jugada-1; 
-        if (AreaJ[row][col]=='X' || AreaJ[row][col]=='O')
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
+bool comprobarCasillaOcupada(int jugada)
+{
+    int row;
+    int col;
+    if (jugada == 1)
+    {
+        row = 0;
+        col = 0;
     }
-
-void ReemplazarCasilla(int Jugada){
-    
-    if (Turno%2==0){
-    int row = Jugada/10, col = Jugada - 1;
-    AreaJ[row][col]='O';
+    else if (jugada == 2)
+    {
+        row = 0;
+        col = 1;
+    }
+    else if (jugada == 3)
+    {
+        row = 0;
+        col = 2;
+    }
+    else if (jugada == 4)
+    {
+        row = 1;
+        col = 0;
+    }
+    else if (jugada == 5)
+    {
+        row = 1;
+        col = 1;
+    }
+    else if (jugada == 6)
+    {
+        row = 1;
+        col = 2;
+    }
+    else if (jugada == 7)
+    {
+        row = 2;     
+        col = 0;
+    }
+    else if (jugada == 8)
+    {
+        row = 2;
+        col = 1;
+    }
+    else if (jugada == 9)
+    {
+        row = 2;
+        col = 2;
+    }
+    if (areaJuego[row][col] == '0' || areaJuego[row][col] == 'x')
+    {
+        return true;
     }
     else
     {
-    int row = Jugada/10, col = Jugada - 1;
-    AreaJ[row][col]='X';
-    }
-    
-}
-
-void Estructura(int){
-    int x=0, y=0;
-    for (int fila = 0; fila < 5; fila++)
-    {
-            for (int columna = 0; columna < 9; columna++)
-            {
-                if (fila== 1 || fila == 3){
-                    cout<<"\x1B[32m"<<"-"<<"\033[0m";
-                }else if (columna==1 || columna == 4 || columna == 7)
-                {
-                    cout << AreaJ[x][y];
-                    y++;
-                }else
-                {
-                    cout <<" ";
-                }
-                if (columna==2 || columna == 5)
-                {
-                    cout<<"\x1B[32m"<<"|"<<"\033[0m";
-                }
-            }
-        cout << "\n";
-        if (fila%2==0)
-        {
-            x++;
-        }
-        
-        y=0;
-    }
-}
-
-bool VerificarGanador(int Jugada){
-    int punto = 0;
-    for (int row = 0; row < 3; row++)
-    {
-        for (int col = 0; col < 3; col++)
-        {
-            if (AreaJ[row][col]=='X' || AreaJ[row][col]=='O')
-            {
-                punto++;
-            }
-            else if (AreaJ[col][row]=='X' || AreaJ[row][col] == 'O')
-            {
-                punto++;
-            }
-        }
-        
-    }
-    if (punto>3)
-    {
-        return true;
-    }else{
         return false;
     }
+}
+
+void colocarjugada(int jugada)
+{
+    char valorJugada;
+    if (turnojugador % 2 == 0)
+    {
+        valorJugada = 'x';
+    }
+    else
+    {
+        valorJugada = '0';
+    }
+
+    if (jugada == 1)
+    {
+        areaJuego[0][0] = valorJugada;
+    }
+    else if (jugada == 2)
+    {
+        areaJuego[0][1] = valorJugada;
+    }
+    else if (jugada == 3)
+    {
+        areaJuego[0][2] = valorJugada;
+    }
+    else if (jugada == 4)
+    {
+        areaJuego[1][0] = valorJugada;
+    }
+    else if (jugada == 5)
+    {
+        areaJuego[1][1] = valorJugada;
+    }
+    else if (jugada == 6)
+    {
+        areaJuego[1][2] = valorJugada;
+    }
+    else if (jugada == 7)
+    {
+        areaJuego[2][0] = valorJugada;
+    }
+    else if (jugada == 8)
+    {
+        areaJuego[2][1] = valorJugada;
+    }
+    else if (jugada == 9)
+    {
+        areaJuego[2][2] = valorJugada;
+    }
+    turnojugador++;
+}
+
+void tableroGato(){
+    int c1=0, f1=0;
+    for(int row=0; row<6 ; row++){
+        for(int col=0; col<11; col++){
+
+            if(col==3 || col==7){
+                coordenadasGato[row][col]='|';
+            }
+            else if (row==1 || row==3){
+                coordenadasGato[row][col]='_';
+            }
+            
+            else if (row!=5 &&(col ==9 || col== 5 || col==1))
+            {
+                coordenadasGato[row][col]= areaJuego[f1][c1];  
+                c1++;
+                if (c1 == 3)
+                {
+                    c1 = 0;
+                    f1++;
+                } 
+            }
+            
+            else{
+                coordenadasGato[row][col]=' ';
+            }
+        }
+    }
+
+    for(int f1=0; f1<6 ; f1++){
+        for(int c1=0; c1<11; c1++){
+            if (coordenadasGato[f1][c1]=='x')
+            {
+                cout<<coordenadasGato[f1][c1];
+            }
+            else if (coordenadasGato[f1][c1]=='0')
+            {
+                cout<<coordenadasGato[f1][c1];
+            }
+            else
+            {
+                cout<<coordenadasGato[f1][c1];
+            }
+        }
+        cout<<"\n";
+    }   
+}
+
+int main(){
+
+    int jugada, juego=0;
+    bool casillaOcupada=true;
+
     
+    do
+    {
+        do
+    {
+        tableroGato();
+        jugada=seleccionarJugada();
+        casillaOcupada= comprobarCasillaOcupada(jugada);
+        if (casillaOcupada==false)  
+        {
+            colocarjugada(jugada);
+            system("clear");
+        }
+        else
+        {
+            system("clear");
+            cout<<"\033[0;31m"<<"Atencion:"<<"\033[0m"<<endl;
+            cout<<"\tHazlo otra vez, la casilla esta ocupada :("<<endl;
+        }
+    } while (casillaOcupada==false);
+
+    } while (casillaOcupada==true);
+
+    return 0;
 }

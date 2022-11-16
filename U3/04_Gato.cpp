@@ -18,7 +18,7 @@ int seleccionarJugada(){
     int tiro;
     do
     {
-        cout << "Dame tu jugada: ";
+        cout <<"\x1B[36m"<< "Dame tu jugada: "<<"\x1B[0m";
         cin >> tiro;
         contador++;
     } while (tiro>9 && tiro<0);
@@ -242,15 +242,15 @@ void tableroGato(){
         for(int c1=0; c1<11; c1++){
             if (coordenadasGato[f1][c1]=='x')
             {
-                cout<<coordenadasGato[f1][c1];
+                cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
             }
             else if (coordenadasGato[f1][c1]=='0')
             {
-                cout<<coordenadasGato[f1][c1];
+               cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
             }
             else
             {
-                cout<<coordenadasGato[f1][c1];
+                cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
             }
         }
         cout<<"\n";

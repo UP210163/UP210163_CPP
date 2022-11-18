@@ -14,7 +14,7 @@
 <div align = "justify">
 
 
->### **1.Execution:**
+>### **1-Execution:**
   <table width="75%" align="left" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td>
@@ -80,15 +80,15 @@ gcc 04_Gato.c -o 04_Gato
  </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
  
  
->### **2.Flowchart:**
+>### **2-Flowchart:**
+<center>
+<img src="../imagenes/DIAGRAMA2.png" align="center"> 
+</center>
+ 
+>### **3-Game:**
  
  
  
  
->### **3. Game:**
  
- 
- 
- 
- 
->### **4.Advantages:**
+>### **4-Advantages:**

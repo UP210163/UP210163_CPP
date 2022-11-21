@@ -1,7 +1,8 @@
 <div align = "center">
 <h1>
 
-# **TIC TAC TOE**
+# <img src="../imagenes/TIC.jpg" align="center" width=500>
+ 
  <div align = "justify">
 
 >## **Index:** 

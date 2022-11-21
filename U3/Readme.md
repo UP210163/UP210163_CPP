@@ -85,6 +85,8 @@ gcc 04_Gato.c -o 04_Gato
 <center>
 <img src="../imagenes/DIAGRAMAF.png" align="center"> 
 </center>
+ <br><br><br><br><br><br>
+ 
  
 >### **3-Game:**
  
@@ -92,13 +94,14 @@ gcc 04_Gato.c -o 04_Gato
 <div align="center">
 <h2>Player vs PC</h2>
 <ol>
-<li>Here is the process of a machine vs. human play
-<img src="../imagenes/1.png" align="center">  
-<li><img src="../imagenes/2.png" align="center">  
-<li><img src="../imagenes/2.2.png" align="center">  
-<li><img src="../imagenes/3.png" align="center">  
+<li>Here is the process of a machine vs. human play<br>
+<img src="../imagenes/1.jpg" align="center" width=250>  
+<li><img src="../imagenes/2.jpg" align="center" width=250>  
+<li><img src="../imagenes/2.2.jpg" align="center" width=250>  
+<li><img src="../imagenes/3.jpg" align="center" width=250>  
  </ol>
  </div>
  
 >### **4-Advantages:**
+ <p>The realization of the code of this game was not easy speaking personally since for it to be possible we had to apply all the knowledge that we have had throughout our stay at the university and also learn to be self-taught when learning and searching new information that could be useful to us when trying to make this game, especially in the area of emotional intelligence, the support of our teacher and even classmates was fundamental</p>
 

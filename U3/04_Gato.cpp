@@ -14,7 +14,7 @@ int seleccionarJugada();
 bool comprobarCasillaOcupada(int jugada);
 void colocarJugada(int jugada);
 void modoDeJuego(int);
-//-----Recursos utilizados por la PC en el juego
+//-----Resources used by the PC in the game
 int mejorJugada(char);
 void colocarJugadaPCenX(int);
 void colocarJugadaPCenO(int);
@@ -27,8 +27,8 @@ bool revisarGanadorPC(int);
 //------------------------------------------------
 int turnoJugador = 0;
 
-//-----Asignación de las variables constantes(variables que no cambian en todo el programa) 
-//para el modo de juego contra la computadora
+//-----Assignment of constant variables (variables that do not change throughout the program)
+//for the game mode against the computer
 
 const char PC = 'O';
 const char JUGADOR = 'X';
@@ -47,12 +47,12 @@ int main(){
     cout<< "Selecciona el modo de juego: \n|--------------------------|\n|1. Jugador 1 VS Jugador 2 | \n|2. Jugador 1 VS PC        |      \n|Opcion: ";
     cin>> modoDeJuego;
 
-    if(modoDeJuego == 1){//Utilizada para indicar la parte del codigo y parametros a utilizar dado el modo de juego
+    if(modoDeJuego == 1){//Used to indicate the part of the code and parameters to use given the game mode
         do
         {
             jugada = seleccionarJugada();
             casillaOcupada = comprobarCasillaOcupada(jugada);
-            //Condicional que indica la repeticion del codigo por casilla ocupada
+           //Conditional that indicates the repetition of the code for occupied cell
             if(casillaOcupada == true){
                 do
                 {
@@ -61,28 +61,27 @@ int main(){
                 } while (casillaOcupada = true);
             }//-----------------------------------
             else
-            {//Condicional que indica la continuacion del codigo porque no hay casilla ocupada
-                system("clear");//Limpia toda la terminal 
-                colocarJugada(jugada);//Una vez que ya se comprobo la casilla libre se coloca la jugada
-                tableroJugador();//Rehace el tablero ya que se borro anteriormente
-                turnoJugador++;//Aumenta el turno de jugador que sera utilizado en mas funciones(variable declarada en la linea 30)
+            {//Conditional that indicates the continuation of the code because there is no box occupied
+                system("clear");//Clean the whole terminal
+                colocarJugada(jugada);// Once the free box has been checked, the move is placed
+                tableroJugador();//Redos the board since it was previously deleted
+                turnoJugador++;//Increases the player turn that will be used in more functions (variable declared in line 30)
             }
-        ganador=revisarGanadorJugador(ganador);//Revisa que haya un ganador al termino de cada colocacion de jugada
-        } while (ganador == false && turnoJugador < 9);//Condicional que se repetira mientras no haya un ganador y el turno sea menor a nueve
+        ganador=revisarGanadorJugador(ganador);//Check that there is a winner at the end of each play placement
+        } while (ganador == false && turnoJugador < 9);//Conditional that will be repeated while there is no winner and the turn is less than nine
     if (turnoJugador < 9)
         {
             if (turnoJugador % 2 == 0)
             {
-                cout << "Gano el jugador 2" <<endl;//Indica que el jugador 2 gana dado que sus turnos siempre seran pares y porque sus variables fueron definidas en colocar jugada 301
+                cout << "Gano el jugador 2" <<endl;// Indicates that player 2 wins since his turns will always be even and because his variables were defined in place move 301
             }
             else
             {
-                cout << "Gano el jugador 1" <<endl;//Indica que le jugador 1 gana ya que sus turnos son impares
-            }
+                cout << "Gano el jugador 1" <<endl;// Indicates that player 1 wins since his turns are odd
         }
         else
         {
-            cout << "---Empate---" <<endl;//si los turnos pasan de 9 y no hay ganador la variable indica empate
+            cout << "---Empate---" <<endl;  //if the turns exceed 9 and there is no winner, the variable indicates a tie
         }
     }
     else if (modoDeJuego == 2)
@@ -141,20 +140,20 @@ int turnoPC()
     int jugada;
     bool jugadaUtilizada = false;
     jugada = mejorJugada(PC);
-    if (jugada != -1)//El -1 indica que si la computadora no esta en peligro de perder ni tampoco con posibilidad de ganar debe poner una jugada random
+    if (jugada != -1)//The -1 indicates that if the computer is not in danger of losing nor with the possibility of winning, it must place a random play
     {
         return jugada;
     }
 
     jugada= mejorJugada(JUGADOR);
-    if (jugada != -1)//el -1 indica que si el jugador no lleva ventaja se colocara una random en el tablero
+    if (jugada != -1)// the -1 indicates that if the player does not have an advantage, a random will be placed on the board
     {
         return jugada;
     }
     while (jugadaUtilizada== false)
     {
         jugadaUtilizada = comprobarCasillaOcupada(jugada);
-        jugada = 1 + rand() % 9; // En caso de que ninguno ni otro, aleatoria
+        jugada = 1 + rand() % 9; // In case neither nor other, random
     }
     return jugada;
 }
@@ -236,7 +235,7 @@ int mejorJugada(char entradaJugador)
     if (entradaJugador == 'X')
     {
         do
-        {//Este apartado se encarga de simular las jugadas del jugador en el plano imaginario comprobando si hay peligro de que este gane
+        {//This section is in charge of simulating the player's moves in the imaginary plane, checking if there is a danger that he will win
             jugadaPC++;
             jugadaUsada = comprobarCasillaOcupadaPC(jugadaPC);
             if (jugadaUsada == false)
@@ -249,7 +248,7 @@ int mejorJugada(char entradaJugador)
     }
     else
     {
-        do//Este apartado simula la jugada de la pc comprobando las jugadas ganadoras
+        do//This section simulates the play of the pc checking the winning moves
         {
             jugadaPC++;
             jugadaUsada = comprobarCasillaOcupadaPC(jugadaPC);

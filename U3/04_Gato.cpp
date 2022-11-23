@@ -8,147 +8,168 @@ Description: EJercicio "Juego del Gato"
 
 using namespace std;
 
-char coordenadasGato[6][11];
-char areaJuego[3][3]={{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
-int turnojugador=1;
-int contador=0;
+char coordenadasMatriz[6][11];
+void tableroJugador();
+char areaDeJuego[3][3] = {{'1', '2', '3'}, {'4', '5', '6'},{'7', '8', '9'}};
+int seleccionarJugada();
+bool comprobarCasillaOcupada(int jugada);
+void colocarJugada(int jugada);
+void modoDeJuego(int);
+int mejorJugada(char);
+void colocarJugadaPCenX(int);
+void colocarJugadaPCenO(int);
+void areaPC();
+char areaDeJuegoPC[3][3] = {{'1', '2', '3'}, {'4', '5', '6'},{'7', '8', '9'}};
+int turnoPC();
+bool comprobarCasillaOcupadaPC(int);
+bool revisarGanadorJugador(int jugada);
+bool revisarGanadorPC(int);
 
-int seleccionarJugada(){
+int turnoJugador = 0;
 
-    int tiro;
-    do
+const char PC = 'O';
+const char JUGADOR = 'X';
+const string TABLERO = "Real";
+const string TABLEROPC = "Imaginario";
+
+
+int main(){
+    int jugada;
+    int modoDeJuego;
+    bool casillaOcupada = true;
+    bool ganador = false;
+    cout<< "-TIC TAC TOE-\n \n";
+    tableroJugador();
+    cout<< "Selecciona el modo de juego: \n|--------------------------|\n|1. Jugador 1 VS Jugador 2 | \n|2. Jugador 1 VS PC        |      \n|Opcion: ";
+    cin>> modoDeJuego;
+
+    if(modoDeJuego == 1){
+        do
+        {
+            jugada = seleccionarJugada();
+            casillaOcupada = comprobarCasillaOcupada(jugada);
+            if(casillaOcupada == true){
+                do
+                {
+                    cout<<"Casilla ocupada, haz otro intento";
+                    break;
+                } while (casillaOcupada = true);
+            }
+            else
+            {
+                system("clear");
+                colocarJugada(jugada);
+                tableroJugador();
+                turnoJugador++;
+            }
+        ganador=revisarGanadorJugador(ganador);
+        } while (ganador == false && turnoJugador < 9);
+    if (turnoJugador < 9)
+        {
+            if (turnoJugador % 2 == 0)
+            {
+                cout << "Gano el jugador 2" <<endl;
+            }
+            else
+            {
+                cout << "Gano el jugador 1" <<endl;
+            }
+        }
+        else
+        {
+            cout << "---Empate---" <<endl;
+        }
+    }
+    else if (modoDeJuego == 2)
     {
-        cout <<"\x1B[36m"<< "Dame tu jugada: "<<"\x1B[0m";
-        cin >> tiro;
-        contador++;
-    } while (tiro>9 && tiro<0);
-    return tiro;
+        do
+        {
+            if (turnoJugador% 2 == 0)
+            {
+                jugada = seleccionarJugada();
+            }
+            else
+            {
+                jugada = turnoPC();
+            }
 
+            casillaOcupada = comprobarCasillaOcupada(jugada);
+            if (casillaOcupada == true)
+            {
+                do
+                {
+                    cout << "Casilla ocupada, haz otro intento" <<endl;
+                    break;
+                } while (casillaOcupada == true);
+            }
+            else if (casillaOcupada == false)
+            {
+                system("clear");
+                colocarJugada(jugada);
+                tableroJugador();
+                turnoJugador++;
+            }
+            ganador = revisarGanadorJugador(ganador);
+        } while (ganador == false && turnoJugador < 9);
+        if (turnoJugador < 9)
+        {
+            if (turnoJugador % 2 == 0)
+            {
+                cout << "Perdiste brouu jsjsjs" <<endl;
+            }
+            else
+            {
+                cout << "Ganaste uwu" <<endl;
+            }
+        }
+        else
+        {
+            cout << "Empate" <<endl;
+        }
+    }
+    
+    return 0;
 }
 
-bool elegirGanador(char juego[3][3]){
-    if(juego[0][0]=='x' || juego[0][0]=='0'){
-        if (juego[0][0]==juego[0][1] && juego[0][0]==juego[0][2]){
-                return true;
-            }    
-            else
-            {
-                return false;
-            }
-            
-        if (juego[0][0]==juego[1][0] && juego[0][0]==juego[2][0]){
-                return true;
-            }    
-            else
-            {
-                return false;
-            }
-            
-    }
-    if (juego[1][1]=='0' || juego[1][1]=='x'){
-            if(juego[1][1]==juego[0][0] && juego[1][1]==juego[2][2]){
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            if(juego[1][1]==juego[1][0] && juego[1][1]==juego[1][2]){
-                if(juego[1][1]=='0'){
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            if(juego[1][1]==juego[2][0] && juego[1][1]==juego[0][2]){
-                    return true;
-                }    
-                else
-                {
-                    return false;
-                }
-            if(juego[1][1]==juego[0][1] && juego[1][1]==juego[2][1]){
-                    return true;
-            }    
-                else
-                {
-                    return false;
-                }
-    }
-    if(juego[2][2]=='x' || juego[2][2]=='0'){
-        if (juego[2][2]==juego[2][0] && juego[2][2]==juego[2][1]){
-                return true;
-            }    
-            else
-            {
-                return false;
-            }
-            
-        if (juego[2][2]==juego[0][2] && juego[2][2]==juego[1][2]){
-                return true;
-            }    
-            else
-            {
-                return false;
-            }
-            
-        
-    }
-}
-
-
-bool comprobarCasillaOcupada(int jugada)
+int turnoPC()
 {
-    int row;
-    int col;
-    if (jugada == 1)
+    int jugada;
+    bool jugadaUtilizada = false;
+    jugada = mejorJugada(PC);
+    if (jugada != -1)
     {
-        row = 0;
-        col = 0;
+        return jugada;
     }
-    else if (jugada == 2)
+
+    jugada= mejorJugada(JUGADOR);
+    if (jugada != -1)
     {
-        row = 0;
-        col = 1;
+        return jugada;
     }
-    else if (jugada == 3)
+    while (jugadaUtilizada== false)
     {
-        row = 0;
-        col = 2;
+        jugadaUtilizada = comprobarCasillaOcupada(jugada);
+        jugada = 1 + rand() % 9; // En caso de que ninguno ni otro, aleatoria
     }
-    else if (jugada == 4)
+    return jugada;
+}
+
+void areaPC()
+{
+    for (int row = 0; row < 3; row++)
     {
-        row = 1;
-        col = 0;
+        for (int col = 0; col < 3; col++)
+        {
+            areaDeJuegoPC[row][col] = areaDeJuego[row][col];
+        }
     }
-    else if (jugada == 5)
-    {
-        row = 1;
-        col = 1;
-    }
-    else if (jugada == 6)
-    {
-        row = 1;
-        col = 2;
-    }
-    else if (jugada == 7)
-    {
-        row = 2;     
-        col = 0;
-    }
-    else if (jugada == 8)
-    {
-        row = 2;
-        col = 1;
-    }
-    else if (jugada == 9)
-    {
-        row = 2;
-        col = 2;
-    }
-    if (areaJuego[row][col] == '0' || areaJuego[row][col] == 'x')
+}
+
+bool comprobarCasillaOcupadaPC(int Jugada)
+{
+    int row = Jugada / 10;
+    int col = Jugada - 1;
+    if (areaDeJuegoPC[row][col] == 'X' || areaDeJuegoPC[row][col] == 'O')
     {
         return true;
     }
@@ -158,72 +179,175 @@ bool comprobarCasillaOcupada(int jugada)
     }
 }
 
-void colocarjugada(int jugada)
-{
-    char valorJugada;
-    if (turnojugador % 2 == 0)
+bool revisarGanadorPC(int jugada){
+    bool revisarGanador = false;
+    for (int posicion = 0; posicion < 3; posicion++)
     {
-        valorJugada = 'x';
+        if ((areaDeJuegoPC[0][posicion] == areaDeJuegoPC[1][posicion]) && (areaDeJuegoPC[0][posicion] == areaDeJuegoPC[2][posicion]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuegoPC[posicion][0] == areaDeJuegoPC[posicion][1]) && (areaDeJuegoPC[posicion][0] == areaDeJuegoPC[posicion][2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuegoPC[posicion][posicion] == areaDeJuegoPC[posicion+1][posicion+1]) && (areaDeJuegoPC[posicion][posicion] == areaDeJuegoPC[posicion+2][posicion+2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuegoPC[2][0] == areaDeJuegoPC[1][1]) && (areaDeJuegoPC[2][0] == areaDeJuegoPC[0][2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+    }
+    return revisarGanador;
+}
+
+void colocarJugadaPCenX(int jugada)
+{
+
+    int row = jugada / 10;
+    int col = jugada - 1;
+    areaDeJuegoPC[row][col] = 'X';
+}
+
+void colocarJugadaPCenO(int jugada)
+{
+    int row = jugada / 10;
+    int col = jugada - 1;
+    areaDeJuegoPC[row][col] = 'O';
+}
+
+int mejorJugada(char entradaJugador)
+{
+    bool jugadaUsada= false;
+    bool ganador = false;
+    int jugadaPC = 0;
+    areaPC();
+    if (entradaJugador == 'X')
+    {
+        do
+        {
+            jugadaPC++;
+            jugadaUsada = comprobarCasillaOcupadaPC(jugadaPC);
+            if (jugadaUsada == false)
+            {
+                colocarJugadaPCenX(jugadaPC);
+                ganador = revisarGanadorPC(jugadaPC);
+            }
+            areaPC();
+        } while (jugadaPC <= 9 && ganador == false);
     }
     else
     {
-        valorJugada = '0';
+        do
+        {
+            jugadaPC++;
+            jugadaUsada = comprobarCasillaOcupadaPC(jugadaPC);
+            if (jugadaUsada == false)
+            {
+                colocarJugadaPCenO(jugadaPC);
+                ganador = revisarGanadorPC(jugadaPC);
+            }
+            areaPC();
+        } while (jugadaPC <= 9 && ganador == false);
     }
-
-    if (jugada == 1)
+    if (jugadaPC >= 10)
     {
-        areaJuego[0][0] = valorJugada;
+        jugadaPC = -1;
     }
-    else if (jugada == 2)
-    {
-        areaJuego[0][1] = valorJugada;
-    }
-    else if (jugada == 3)
-    {
-        areaJuego[0][2] = valorJugada;
-    }
-    else if (jugada == 4)
-    {
-        areaJuego[1][0] = valorJugada;
-    }
-    else if (jugada == 5)
-    {
-        areaJuego[1][1] = valorJugada;
-    }
-    else if (jugada == 6)
-    {
-        areaJuego[1][2] = valorJugada;
-    }
-    else if (jugada == 7)
-    {
-        areaJuego[2][0] = valorJugada;
-    }
-    else if (jugada == 8)
-    {
-        areaJuego[2][1] = valorJugada;
-    }
-    else if (jugada == 9)
-    {
-        areaJuego[2][2] = valorJugada;
-    }
-    turnojugador++;
+    return jugadaPC;
 }
 
-void tableroGato(){
+
+
+int seleccionarJugada(){
+
+    int jugada;
+    do
+    {
+        cout << "Dame tu jugada: ";
+        cin >> jugada;
+    } while (jugada < 0 || jugada > 9);
+    return jugada;
+
+}
+
+bool comprobarCasillaOcupada(int jugada)
+{
+    int row = jugada / 10; 
+    int col = jugada - 1;
+    if (areaDeJuego[row][col] == 'X' || areaDeJuego[row][col] == 'O')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void colocarJugada(int jugada)
+{
+    if (turnoJugador % 2 == 0)
+    {
+        int row = jugada / 10, col = jugada - 1;
+        areaDeJuego[row][col] = 'X';
+    }
+    else
+    {
+        int row = jugada / 10, col = jugada - 1;
+        areaDeJuego[row][col] = 'O';
+    }
+}
+
+bool revisarGanadorJugador(int jugada){
+    bool revisarGanador = false;
+    for (int posicion = 0; posicion < 3; posicion++)
+    {
+        if ((areaDeJuego[0][posicion] == areaDeJuego[1][posicion]) && (areaDeJuego[0][posicion] == areaDeJuego[2][posicion]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuego[posicion][0] == areaDeJuego[posicion][1]) && (areaDeJuego[posicion][0] == areaDeJuego[posicion][2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuego[posicion][posicion] == areaDeJuego[posicion+1][posicion+1]) && (areaDeJuego[posicion][posicion] == areaDeJuego[posicion+2][posicion+2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+        else if ((areaDeJuego[2][0] == areaDeJuego[1][1]) && (areaDeJuego[2][0] == areaDeJuego[0][2]))
+        {
+            revisarGanador = true;
+            break;
+        }
+    }
+    return revisarGanador;
+}
+
+void tableroJugador(){
     int c1=0, f1=0;
     for(int row=0; row<6 ; row++){
         for(int col=0; col<11; col++){
 
             if(col==3 || col==7){
-                coordenadasGato[row][col]='|';
+                coordenadasMatriz[row][col]='|';
             }
             else if (row==1 || row==3){
-                coordenadasGato[row][col]='_';
+                coordenadasMatriz[row][col]='_';
             }
             
             else if (row!=5 &&(col ==9 || col== 5 || col==1))
             {
-                coordenadasGato[row][col]= areaJuego[f1][c1];  
+                coordenadasMatriz[row][col]= areaDeJuego[f1][c1];  
                 c1++;
                 if (c1 == 3)
                 {
@@ -233,57 +357,26 @@ void tableroGato(){
             }
             
             else{
-                coordenadasGato[row][col]=' ';
+                coordenadasMatriz[row][col]=' ';
             }
         }
     }
 
     for(int f1=0; f1<6 ; f1++){
         for(int c1=0; c1<11; c1++){
-            if (coordenadasGato[f1][c1]=='x')
+            if (coordenadasMatriz[f1][c1]=='X')
             {
-                cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
+                cout<<coordenadasMatriz[f1][c1];
             }
-            else if (coordenadasGato[f1][c1]=='0')
+            else if (coordenadasMatriz[f1][c1]=='O')
             {
-               cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
+                cout<<coordenadasMatriz[f1][c1];
             }
             else
             {
-                cout<<"\x1B[35m"<<coordenadasGato[f1][c1]<<"\x1B[0m";
+                cout<<coordenadasMatriz[f1][c1];
             }
         }
         cout<<"\n";
     }   
-}
-
-int main(){
-
-    int jugada, juego=0;
-    bool casillaOcupada=true;
-
-    
-    do
-    {
-        do
-    {
-        tableroGato();
-        jugada=seleccionarJugada();
-        casillaOcupada= comprobarCasillaOcupada(jugada);
-        if (casillaOcupada==false)  
-        {
-            colocarjugada(jugada);
-            system("clear");
-        }
-        else
-        {
-            system("clear");
-            cout<<"\033[0;31m"<<"Atencion:"<<"\033[0m"<<endl;
-            cout<<"\tHazlo otra vez, la casilla esta ocupada :("<<endl;
-        }
-    } while (casillaOcupada==false);
-
-    } while (casillaOcupada==true);
-
-    return 0;
 }
